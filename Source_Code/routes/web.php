@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReportEarthquakeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::post('/create-report', [ReportEarthquakeController::class, 'createEarthquakeReport']);
